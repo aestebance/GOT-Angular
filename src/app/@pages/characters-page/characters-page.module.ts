@@ -2,17 +2,19 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import {CharactersPageComponent} from './characters-page.component';
 import { CharactersPageRoutingModule } from './characters-page-routing.module';
-import {MenuModule} from '../../shared/components/menu/menu.module';
+import {SharedModule} from '../../shared/shared.module';
 import {CoreModule} from '../../core/core.module';
 import { CharacterDetailComponent } from './pages/character-detail/character-detail.component';
+import { CharacterItemComponent } from './components/character-item/character-item.component';
+import { CharactersGalleryComponent } from './components/characters-gallery/characters-gallery.component';
 
 
 @NgModule({
-  declarations: [CharactersPageComponent, CharacterDetailComponent],
+  declarations: [CharactersPageComponent, CharacterDetailComponent, CharacterItemComponent, CharactersGalleryComponent],
   imports: [
     CommonModule,
     CharactersPageRoutingModule,
-    MenuModule,
+    SharedModule,
     CoreModule
   ],
   exports: [
