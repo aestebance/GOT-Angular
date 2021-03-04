@@ -41,7 +41,10 @@
 
             <div class="c-main-bottom__list">
               <div class="c-main-bottom__list--margin">
-                  <span class="c-main-bottom__text" *ngFor="let appearances of charData.appearances">{{appearances}}<br/></span>
+                <cdk-virtual-scroll-viewport itemSize="1" class="c-chardetail__container">
+                  <span class="c-main-bottom__text" *cdkVirtualFor="let appearances of charData.appearances">{{appearances}}<br/></span>
+                </cdk-virtual-scroll-viewport>
+
               </div>
             </div>
 

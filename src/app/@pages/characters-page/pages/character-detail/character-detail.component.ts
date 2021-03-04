@@ -24,8 +24,6 @@ export class CharacterDetailComponent implements OnInit {
           this.charData = res;
           this.housesService.getHouse(this.charData.house).subscribe((data: any) => {
             this.houseData = data;
-            console.log(this.charData);
-            console.log(this.houseData);
           });
         });
       }

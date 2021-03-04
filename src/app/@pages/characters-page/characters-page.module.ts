@@ -7,6 +7,7 @@ import {CoreModule} from '../../core/core.module';
 import { CharacterDetailComponent } from './pages/character-detail/character-detail.component';
 import { CharacterItemComponent } from './components/character-item/character-item.component';
 import { CharactersGalleryComponent } from './components/characters-gallery/characters-gallery.component';
+import {ScrollingModule} from '@angular/cdk/scrolling';
 
 
 @NgModule({
@@ -15,7 +16,8 @@ import { CharactersGalleryComponent } from './components/characters-gallery/char
     CommonModule,
     CharactersPageRoutingModule,
     SharedModule,
-    CoreModule
+    CoreModule,
+    ScrollingModule
   ],
   exports: [
     CharactersPageRoutingModule

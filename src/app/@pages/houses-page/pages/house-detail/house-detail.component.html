@@ -1,1 +1,92 @@
-{{houseName}}
+<div class="b-container">
+  <app-header [showHome]="showHome" [showBar]="showBar" [showBack]="showBack"></app-header>
+  <div class="c-main-HouseDetail">
+    <div class="detail">
+      <div class="c-main-top">
+        <img *ngIf="houseData.logoURL" class="c-main-top__image" src="{{houseData.logoURL}}" alt="{{houseData.name}}"/>
+        <img *ngIf="!houseData.logoURL" class="c-main-top__image" src="/assets/images/no-image.png" alt="{{houseData.name}}"/>
+      </div>
+      <div class="c-main-middle">
+                        <span class="c-main-middle__text">
+                            {{houseData.name}}
+                        </span>
+      </div>
+      <div class="c-main-bottom">
+        <div class="c-main-bottom__box">
+          <div class="c-main-bottom__title">
+            <span>Lema</span>
+          </div>
+          <div class="c-main-bottom__content">
+            <div class="c-main-bottom__list--margin">
+                                    <span
+                                      class="c-main-bottom__text">{{houseData.words}}
+                                    </span>
+            </div>
+          </div>
+        </div>
+        <div class="c-main-bottom__box">
+          <div class="c-main-bottom__title">
+            <span>Sede</span>
+          </div>
+
+          <div class="c-main-bottom__content">
+            <div class="c-main-bottom__list">
+              <div class="c-main-bottom__list--margin">
+                <span class="c-main-bottom__text" *ngFor="let seat of houseData.seat">{{seat}}<br/></span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="c-main-bottom__box">
+          <div class="c-main-bottom__title">
+            <span>Region</span>
+          </div>
+          <div class="c-main-bottom__content">
+            <div class="c-main-bottom__list">
+              <div class="c-main-bottom__list--margin">
+                  <span class="c-main-bottom__text" *ngFor="let region of houseData.region">{{region}}<br/></span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <div class="c-main-bottom__box">
+          <div class="c-main-bottom__title">
+            <span>Alianzas</span>
+          </div>
+          <div class="c-main-bottom__content">
+            <div class="c-main-bottom__list">
+              <div class="c-main-bottom__list--margin">
+                  <span class="c-main-bottom__text" *ngFor="let allegiance of houseData.allegiance">{{allegiance}}<br/></span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="c-main-bottom__box">
+          <div class="c-main-bottom__title">
+            <span>Religiones</span>
+          </div>
+          <div class="c-main-bottom__content">
+            <div class="c-main-bottom__list">
+              <div class="c-main-bottom__list--margin">
+                  <span class="c-main-bottom__text" *ngFor="let religion of houseData.religion">{{religion}}<br/></span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="c-main-bottom__box">
+          <div class="c-main-bottom__title">
+            <span>Fundacion</span>
+          </div>
+          <div class="c-main-bottom__content">
+            <div class="c-main-bottom__list--margin">
+                                    <span
+                                      class="c-main-bottom__text">10/10/2020
+                                    </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
