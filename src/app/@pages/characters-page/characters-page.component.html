@@ -1,2 +1,7 @@
-<app-header [showHome]="showHome" [showBar]="showBar"></app-header>
-<app-menu></app-menu>
+<div class="b-container">
+  <app-header [showHome]="showHome" [showBar]="showBar" (searchBarEmitter)="searchBarChanges($event)"></app-header>
+  <div class="c-main-char">
+    <app-characters-gallery [characterList]="characterFiltered"></app-characters-gallery>
+  </div>
+  <app-menu></app-menu>
+</div>

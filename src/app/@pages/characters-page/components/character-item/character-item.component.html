@@ -1,1 +1,8 @@
-<p>character-item works!</p>
+<a routerLink="/characters/details/{{character.name}}">
+  <div class="c-card">
+    <img src="{{character.image}}" alt="{{character.name}}" class="c-card__img"/>
+    <div class="c-card__hover">
+      <figcaption class="c-card__text u-font-color-white">{{character.name}}</figcaption>
+    </div>
+  </div>
+</a>

@@ -1,11 +1,12 @@
 .c-header {
-  position: absolute;
+  position: fixed;
   width: 100%;
   height: 8.3vh;
   display: flex;
   flex-wrap: wrap;
   padding-left: 8vw;
   padding-right: 8vw;
+  z-index: 2;
 }
 
 .c-left-bar {

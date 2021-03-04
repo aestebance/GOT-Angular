@@ -8,14 +8,19 @@ import {CharactersService} from '../../shared/services/characters.service';
 })
 export class CharactersPageComponent implements OnInit {
   characterList;
+  characterFiltered;
   showHome = true;
   showBar = true;
 
   constructor(private characterService: CharactersService) {
     this.characterService.getCharacters().subscribe((res: any) => {
       this.characterList = res;
-      console.log(this.characterList);
+      this.characterFiltered = this.characterList;
     });
+  }
+
+  searchBarChanges(changes): void {
+    this.characterFiltered = this.characterList.filter((data) => data.name.toUpperCase().includes(changes.toUpperCase()));
   }
 
   ngOnInit(): void {

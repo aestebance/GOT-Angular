@@ -1,1 +1,90 @@
-<p>{{charName}}</p>
+<div class="b-container">
+  <div class="c-main-charDetail">
+    <div class="detail">
+      <div class="c-main-top">
+        <img class="c-main-top__image" src="{{charData.image}}" alt=""/>
+      </div>
+      <div class="c-main-middle">
+                        <span class="c-main-middle__text">
+                            {{charData.name}}
+                        </span>
+      </div>
+      <div class="c-main-bottom">
+        <div class="c-main-bottom__box">
+          <div class="c-main-bottom__title">
+            <span>Casa</span>
+          </div>
+          <div class="c-main-bottom__content">
+            <img class="c-main-bottom__img" src="{{houseData[0].logoURL}}" alt=""/>
+          </div>
+        </div>
+        <div class="c-main-bottom__box">
+          <div class="c-main-bottom__title">
+            <span>Alianzas</span>
+          </div>
+
+          <div class="c-main-bottom__content">
+            <div class="c-main-bottom__list">
+              <div class="c-main-bottom__list--margin">
+                  <span class="c-main-bottom__text" *ngFor="let allegiance of charData.allegiances">{{allegiance}}<br/></span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="c-main-bottom__box">
+          <div class="c-main-bottom__title">
+            <span>Apariciones</span>
+          </div>
+
+          <div class="c-main-bottom__content">
+
+            <div class="c-main-bottom__list">
+              <div class="c-main-bottom__list--margin">
+                  <span class="c-main-bottom__text" *ngFor="let appearances of charData.appearances">{{appearances}}<br/></span>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+        <div class="c-main-bottom__box">
+          <div class="c-main-bottom__title">
+            <span>Padre</span>
+          </div>
+          <div class="c-main-bottom__content">
+            <div class="c-main-bottom__list">
+              <div class="c-main-bottom__list--margin">
+                                        <span
+                                          class="c-main-bottom__text">{{charData.father}}</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="c-main-bottom__box">
+          <div class="c-main-bottom__title">
+            <span>Hermanos</span>
+          </div>
+          <div class="c-main-bottom__content">
+            <div class="c-main-bottom__list">
+              <div class="c-main-bottom__list--margin">
+                  <span class="c-main-bottom__text" *ngFor="let sibling of charData.siblings">{{sibling}}<br/></span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="c-main-bottom__box">
+          <div class="c-main-bottom__title">
+            <span>Titulos</span>
+          </div>
+          <div class="c-main-bottom__content">
+            <div class="c-main-bottom__list">
+              <div class="c-main-bottom__list--margin">
+                  <span class="c-main-bottom__text" *ngFor="let title of charData.titles">{{title}}<br/></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -12,4 +12,9 @@ export class HousesService {
   getHouses(): Observable<any> {
     return this.http.get('https://api.got.show/api/show/houses');
   }
+
+  getHouse(houseName): Observable<any> {
+    return this.http.get('https://api.got.show/api/show/houses/' + houseName);
+  }
+
 }

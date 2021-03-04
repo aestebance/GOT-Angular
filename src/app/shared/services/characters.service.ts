@@ -12,5 +12,8 @@ export class CharactersService {
 
   getCharacters(): Observable<object> {
       return this.http.get('https://api.got.show/api/show/characters');
-    }
+  }
+  getChar(charName): Observable<object> {
+    return this.http.get('https://api.got.show/api/show/characters/' + charName);
+  }
 }

@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {ActivatedRoute} from '@angular/router';
+import {CharactersService} from '../../../../shared/services/characters.service';
+import {HousesService} from '../../../../shared/services/houses.service';
 
 @Component({
   selector: 'app-character-detail',
@@ -8,10 +10,21 @@ import {ActivatedRoute} from '@angular/router';
 })
 export class CharacterDetailComponent implements OnInit {
   charName: any;
-  constructor(private route: ActivatedRoute) {
+  charData: any;
+  houseData: any;
+
+  constructor(private route: ActivatedRoute, private characterService: CharactersService, private housesService: HousesService) {
     this.route.paramMap.subscribe(params =>  {
       if (params.get('charName')) {
         this.charName = params.get('charName');
+        this.characterService.getChar(this.charName).subscribe((res: any) => {
+          this.charData = res;
+          this.housesService.getHouse(this.charData.house).subscribe((data: any) => {
+            this.houseData = data;
+            console.log(this.charData);
+            console.log(this.houseData);
+          });
+        });
       }
     });
   }

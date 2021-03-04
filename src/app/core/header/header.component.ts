@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { EventEmitter, Component, OnInit, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'app-header',
@@ -8,8 +8,13 @@ import { Component, OnInit, Input } from '@angular/core';
 export class HeaderComponent implements OnInit {
   @Input() showHome: any;
   @Input() showBar: any;
+  @Output() searchBarEmitter = new EventEmitter();
 
   constructor() { }
+
+  searchBarChanges(changes): void {
+    this.searchBarEmitter.emit(changes);
+  }
 
   ngOnInit(): void {
   }
