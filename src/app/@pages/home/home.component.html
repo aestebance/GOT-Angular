@@ -1,3 +1,8 @@
-<app-header></app-header>
-<p>home works!</p>
-<app-menu></app-menu>
+<app-header [showHome]="showHome" [showBar]="showBar"></app-header>
+<div class="b-container b-container--background">
+  <Header hideHome="true"></Header>
+  <div class="c-main-home">
+    <p class="c-title">GAME OF THRONES</p>
+  </div>
+  <app-menu></app-menu>
+</div>

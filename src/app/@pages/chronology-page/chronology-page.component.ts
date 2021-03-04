@@ -6,6 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./chronology-page.component.scss']
 })
 export class ChronologyPageComponent implements OnInit {
+  showHome = true;
+  showBar = true;
 
   constructor() { }
 
