@@ -1,5 +1,11 @@
 <div class="c-header">
   <div class="c-left-bar">
+    <a *ngIf="showBack" routerLink="/{{showBack}}">
+      <div class="c-left-bar__nav">
+        <img class="c-left-bar__vector" src="/assets/images/vector.svg" alt=""/>
+        <span class="c-left-bar__text">Volver</span>
+      </div>
+    </a>
     <app-search-bar *ngIf="showBar" class="c-searchBar" (searchBarEmitter)="searchBarChanges($event)"></app-search-bar>
   </div>
   <div class="c-top-links">

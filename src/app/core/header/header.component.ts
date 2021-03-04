@@ -8,6 +8,7 @@ import { EventEmitter, Component, OnInit, Input, Output } from '@angular/core';
 export class HeaderComponent implements OnInit {
   @Input() showHome: any;
   @Input() showBar: any;
+  @Input() showBack: any;
   @Output() searchBarEmitter = new EventEmitter();
 
   constructor() { }
