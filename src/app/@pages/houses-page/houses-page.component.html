@@ -1,2 +1,8 @@
-<app-header [showHome]="showHome" [showBar]="showBar" [showBack]="false"></app-header>
-<app-menu></app-menu>
+<div class="b-container">
+  <app-header [showHome]="showHome" [showBar]="showBar" [showBack]="false" (searchBarEmitter)="searchBarChanges($event)"></app-header>
+  <div class="c-main-house">
+    <app-house-gallery [houseList]="houseFiltered"></app-house-gallery>
+  </div>
+  <app-menu></app-menu>
+</div>
+

@@ -3,7 +3,7 @@
   <div class="c-main-charDetail">
     <div class="detail">
       <div class="c-main-top">
-        <img class="c-main-top__image" src="{{charData.image}}" alt=""/>
+        <img *ngIf="charData.image" class="c-main-top__image" src="{{charData.image}}" alt=""/>
       </div>
       <div class="c-main-middle">
                         <span class="c-main-middle__text">
@@ -16,7 +16,7 @@
             <span>Casa</span>
           </div>
           <div class="c-main-bottom__content">
-            <img class="c-main-bottom__img" src="{{houseData[0].logoURL}}" alt=""/>
+            <img *ngIf="houseData[0] !== undefined && houseData[0].logoURL !== undefined" class="c-main-bottom__img" src="{{houseData[0].logoURL}}" alt=""/>
           </div>
         </div>
         <div class="c-main-bottom__box">

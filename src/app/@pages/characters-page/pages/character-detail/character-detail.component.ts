@@ -33,6 +33,7 @@ export class CharacterDetailComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.charData = false;
+    this.houseData = false;
   }
-
 }

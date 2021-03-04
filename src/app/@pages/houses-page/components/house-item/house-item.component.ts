@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-house-item',
@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./house-item.component.scss']
 })
 export class HouseItemComponent implements OnInit {
+  @Input() house: any;
 
   constructor() { }
 

@@ -1,1 +1,9 @@
-<p>house-item works!</p>
+<a routerLink='/houses/details/{{house.name}}'>
+  <div class="c-house">
+    <img *ngIf="house.logoURL" class="c-house__img" src="{{house.logoURL}}" alt="{{house.name}}"/>
+    <img *ngIf="!house.logoURL" class="c-house__img" src="/assets/images/no-image.png" alt="{{house.name}}"/>
+    <div class="c-house__hover">
+      <figcaption class="c-house__text u-font-color-white">{{house.name}}</figcaption>
+    </div>
+  </div>
+</a>

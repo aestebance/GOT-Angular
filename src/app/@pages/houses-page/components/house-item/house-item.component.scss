@@ -1,0 +1,34 @@
+.c-house {
+  margin-top: 15px;
+  max-width: 215px;
+  min-width: 215px;
+  height: 230px;
+  display: flex;
+  justify-content: center;
+  object-fit: contain;
+  &__img {
+    max-width: 100%;
+    min-width: 100%;
+    height: 100%;
+  }
+  &__hover {
+    position: absolute;
+    top: 240px;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    width: 100%;
+    height: 56px;
+  }
+  &__text {
+    max-width: 100%;
+    min-width: 100%;
+    font-size: 14px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: center;
+  }
+}

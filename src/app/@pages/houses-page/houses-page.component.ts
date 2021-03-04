@@ -8,14 +8,19 @@ import {HousesService} from '../../shared/services/houses.service';
 })
 export class HousesPageComponent implements OnInit {
   houseList;
+  houseFiltered;
   showHome = true;
   showBar = true;
 
   constructor(private housesService: HousesService) {
     this.housesService.getHouses().subscribe((res:any) => {
       this.houseList = res;
-      console.log(this.houseList);
+      this.houseFiltered = this.houseList;
     });
+  }
+
+  searchBarChanges(changes): void {
+    this.houseFiltered = this.houseList.filter((data) => data.name.toUpperCase().includes(changes.toUpperCase()));
   }
 
   ngOnInit(): void {
