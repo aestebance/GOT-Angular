@@ -1,6 +1,6 @@
 <div class="b-container">
   <app-header [showHome]="showHome" [showBar]="showBar" [showBack]="false" (searchBarEmitter)="searchBarChanges($event)"></app-header>
-  <div class="c-main-char">
+  <div data-simplebar data-simplebar-auto-hide="false" id="charcontent" class="c-main-char">
     <app-characters-gallery [characterList]="characterFiltered"></app-characters-gallery>
   </div>
   <app-menu></app-menu>

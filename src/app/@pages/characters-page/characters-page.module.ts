@@ -9,7 +9,6 @@ import { CharacterItemComponent } from './components/character-item/character-it
 import { CharactersGalleryComponent } from './components/characters-gallery/characters-gallery.component';
 import {ScrollingModule} from '@angular/cdk/scrolling';
 
-
 @NgModule({
   declarations: [CharactersPageComponent, CharacterDetailComponent, CharacterItemComponent, CharactersGalleryComponent],
   imports: [

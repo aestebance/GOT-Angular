@@ -37,14 +37,11 @@
             <span>Apariciones</span>
           </div>
 
-          <div class="c-main-bottom__content">
+          <div data-simplebar data-simplebar-auto-hide="false" class="c-main-bottom__content">
 
             <div class="c-main-bottom__list">
               <div class="c-main-bottom__list--margin">
-                <cdk-virtual-scroll-viewport itemSize="1" class="c-chardetail__container">
-                  <span class="c-main-bottom__text" *cdkVirtualFor="let appearances of charData.appearances">{{appearances}}<br/></span>
-                </cdk-virtual-scroll-viewport>
-
+                  <span class="c-main-bottom__text" *ngFor="let appearances of charData.appearances">{{appearances}}<br/></span>
               </div>
             </div>
 
@@ -80,7 +77,7 @@
           <div class="c-main-bottom__title">
             <span>Titulos</span>
           </div>
-          <div class="c-main-bottom__content">
+          <div data-simplebar data-simplebar-auto-hide="false" class="c-main-bottom__content">
             <div class="c-main-bottom__list">
               <div class="c-main-bottom__list--margin">
                   <span class="c-main-bottom__text" *ngFor="let title of charData.titles">{{title}}<br/></span>
