@@ -1,2 +1,33 @@
-<app-header [showHome]="showHome" [showBar]="showBar" [showBack]="false"></app-header>
-<app-menu></app-menu>
+<div class="b-container">
+  <app-header [showHome]="showHome" [showBar]="showBar" [showBack]="false"></app-header>
+  <div class="c-chronology">
+    <div class="c-simpleBar" data-simplebar data-simplebar-auto-hide="false" id="chronology">
+      <div class="c-chronology__middle">
+        <div class="c-chronology__topTimeLine">
+          <div class="c-circle">
+            <p class="c-circle__text">18</p>
+          </div>
+          <div class="c-arrow">
+            <img src="/assets/images/flechaUp.svg" alt=""/>
+            <!--            <img src="/assets/images/flechaDown.svg" alt=""/>-->
+          </div>
+          <div class="c-arrow__down">
+          </div>
+        </div>
+        <div class="c-chronology__timeLine">
+          <div class="c-block">
+            <div *ngFor="let character of characterList; let i = index" [attr.data-index]="i">
+              <app-chronology-box *ngIf="i % 2 === 0" [character]="character" [index]="i"></app-chronology-box>
+            </div>
+            <div class="c-block">
+              <div class="c-block--blank"></div>
+              <div *ngFor="let character of characterList; let i = index" [attr.data-index]="i">
+                <app-chronology-box *ngIf="i % 2 === 0" [character]="character" [index]="i"></app-chronology-box>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <app-menu></app-menu>

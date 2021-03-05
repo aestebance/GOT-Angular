@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-chronology-box',
@@ -6,6 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./chronology-box.component.scss']
 })
 export class ChronologyBoxComponent implements OnInit {
+  @Input() character: any;
+  @Input() index: any;
 
   constructor() { }
 

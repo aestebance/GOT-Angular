@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {CharactersService} from '../../shared/services/characters.service';
 
 @Component({
   selector: 'app-chronology-page',
@@ -7,9 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ChronologyPageComponent implements OnInit {
   showHome = true;
-  showBar = true;
+  showBar = false;
+  characterList = [];
 
-  constructor() { }
+  constructor(private characterService: CharactersService) {
+    this.characterService.getCharacters().subscribe((res: any) => {
+      this.characterList = res;
+      console.log(this.characterList);
+    });
+  }
 
   ngOnInit(): void {
   }
