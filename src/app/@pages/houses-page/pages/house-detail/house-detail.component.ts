@@ -13,6 +13,8 @@ export class HouseDetailComponent implements OnInit {
   showHome = true;
   showBar = false;
   showBack = 'houses';
+  date: any;
+  loading = true;
 
   constructor(private route: ActivatedRoute, private housesService: HousesService) {
     this.route.paramMap.subscribe(params => {
@@ -20,7 +22,8 @@ export class HouseDetailComponent implements OnInit {
         this.houseName = params.get('houseName');
         this.housesService.getHouse(this.houseName).subscribe((res) => {
           this.houseData = res[0];
-          console.log(this.houseData);
+          this.date = new Date(this.houseData.createdAt);
+          this.loading = false;
         });
       }
     });

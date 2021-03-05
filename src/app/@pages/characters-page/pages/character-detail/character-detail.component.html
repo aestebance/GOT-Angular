@@ -1,3 +1,4 @@
+<app-loading [loading]="loading"></app-loading>
 <div class="b-container">
   <app-header [showHome]="showHome" [showBar]="showBar" [showBack]="showBack"></app-header>
   <div class="c-main-charDetail">
@@ -16,7 +17,8 @@
             <span>Casa</span>
           </div>
           <div class="c-main-bottom__content">
-            <img *ngIf="houseData[0] !== undefined && houseData[0].logoURL !== undefined" class="c-main-bottom__img" src="{{houseData[0].logoURL}}" alt=""/>
+            <img *ngIf="houseData[0] !== undefined && houseData[0].logoURL !== undefined" class="c-main-bottom__img" src="{{houseData[0].logoURL}}" alt="{{charData.house}}"/>
+            <span *ngIf="houseData[0] === undefined || houseData[0].logoURL === undefined" class="c-main-bottom__text">{{charData.house}}</span>
           </div>
         </div>
         <div class="c-main-bottom__box">

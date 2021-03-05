@@ -11,11 +11,13 @@ export class CharactersPageComponent implements OnInit {
   characterFiltered;
   showHome = true;
   showBar = true;
+  loading = true;
 
   constructor(private characterService: CharactersService) {
     this.characterService.getCharacters().subscribe((res: any) => {
       this.characterList = res;
       this.characterFiltered = this.characterList;
+      this.loading = false;
     });
   }
 

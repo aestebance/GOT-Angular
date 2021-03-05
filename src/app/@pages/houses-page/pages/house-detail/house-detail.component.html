@@ -1,3 +1,4 @@
+<app-loading [loading]="loading"></app-loading>
 <div class="b-container">
   <app-header [showHome]="showHome" [showBar]="showBar" [showBack]="showBack"></app-header>
   <div class="c-main-HouseDetail">
@@ -80,8 +81,8 @@
           </div>
           <div class="c-main-bottom__content">
             <div class="c-main-bottom__list--margin">
-                                    <span
-                                      class="c-main-bottom__text">10/10/2020
+                                    <span *ngIf="date !== undefined"
+                                      class="c-main-bottom__text">{{date.getDate() + '/' + date.getMonth() + '/' + date.getFullYear()}}
                                     </span>
             </div>
           </div>

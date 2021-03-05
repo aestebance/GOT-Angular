@@ -7,15 +7,23 @@ import {HousesService} from '../../shared/services/houses.service';
   styleUrls: ['./houses-page.component.scss']
 })
 export class HousesPageComponent implements OnInit {
-  houseList;
+  houseList = [];
   houseFiltered;
   showHome = true;
   showBar = true;
+  loading = true;
 
   constructor(private housesService: HousesService) {
     this.housesService.getHouses().subscribe((res:any) => {
-      this.houseList = res;
+      res.map((house) => {
+        if (house.logoURL) {
+          this.houseList.unshift(house);
+        } else {
+          this.houseList.push(house);
+        }
+      });
       this.houseFiltered = this.houseList;
+      this.loading = false;
     });
   }
 

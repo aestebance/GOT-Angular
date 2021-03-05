@@ -1,1 +1,6 @@
-<p>loading works!</p>
+<div *ngIf="loading" class="c-loading c-loading--loading">
+  <div class="lds-hourglass"></div>
+</div>
+<div *ngIf="!loading" class="c-loading">
+  <div class="lds-hourglass"></div>
+</div>

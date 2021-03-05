@@ -14,6 +14,7 @@ export class HousesService {
   }
 
   getHouse(houseName): Observable<any> {
+    houseName = houseName.replace(/&apos;/g, '\'');
     return this.http.get('https://api.got.show/api/show/houses/' + houseName);
   }
 

@@ -15,6 +15,7 @@ export class CharacterDetailComponent implements OnInit {
   showHome = true;
   showBar = false;
   showBack = 'characters';
+  loading = true;
 
   constructor(private route: ActivatedRoute, private characterService: CharactersService, private housesService: HousesService) {
     this.route.paramMap.subscribe(params =>  {
@@ -24,6 +25,7 @@ export class CharacterDetailComponent implements OnInit {
           this.charData = res;
           this.housesService.getHouse(this.charData.house).subscribe((data: any) => {
             this.houseData = data;
+            this.loading = false;
           });
         });
       }

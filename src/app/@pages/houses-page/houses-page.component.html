@@ -1,6 +1,7 @@
+<app-loading [loading]="loading"></app-loading>
 <div class="b-container">
   <app-header [showHome]="showHome" [showBar]="showBar" [showBack]="false" (searchBarEmitter)="searchBarChanges($event)"></app-header>
-  <div class="c-main-house">
+  <div data-simplebar data-simplebar-auto-hide="false" id="housescontent" class="c-main-house">
     <app-house-gallery [houseList]="houseFiltered"></app-house-gallery>
   </div>
   <app-menu></app-menu>
