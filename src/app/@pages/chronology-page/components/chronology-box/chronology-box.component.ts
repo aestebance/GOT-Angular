@@ -8,6 +8,7 @@ import { Component, OnInit, Input } from '@angular/core';
 export class ChronologyBoxComponent implements OnInit {
   @Input() character: any;
   @Input() index: any;
+  @Input() right: boolean;
 
   constructor() { }
 

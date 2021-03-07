@@ -1,14 +1,21 @@
-<a routerLink="/characters">
-  <div *ngIf="index % 2 === 0" class='c-box'>
-    <p class="c-box__age">{{character.age.age}}</p>
-    <p class="c-box__name">{{character.name}}</p>
-    <img class="c-box__img" src="{{character.image}}" alt=""/>
-    <!--    <img class="c-box__img" src="/assets/images/no-image.png" alt=""/>-->
-  </div>
-  <div *ngIf="index % 2 !== 0" class='c-box c-box--right'>
-    <p class="c-box__age">{{character.age.age}}</p>
-    <p class="c-box__name">{{character.name}}</p>
-    <img class="c-box__img" src="{{character.image}}" alt=""/>
-<!--    <img class="c-box__img" src="/assets/images/no-image.png" alt=""/>-->
-  </div>
-</a>
+<ng-template [ngIf]="right" [ngIfElse]="left">
+  <a routerLink="/characters/details/{{character.name}}">
+    <div class='c-box c-box--right'>
+      <p class="c-box__age">{{character.age.age}}</p>
+      <p class="c-box__name">{{character.name}}</p>
+      <img class="c-box__img" src="{{character.image}}" alt=""/>
+      <!--    <img class="c-box__img" src="/assets/images/no-image.png" alt=""/>-->
+    </div>
+  </a>
+</ng-template>
+<ng-template #left>
+  <a routerLink="/characters/details/{{character.name}}">
+    <div class='c-box'>
+      <p class="c-box__age">{{character.age.age}}</p>
+      <p class="c-box__name">{{character.name}}</p>
+      <img class="c-box__img" src="{{character.image}}" alt=""/>
+      <!--    <img class="c-box__img" src="/assets/images/no-image.png" alt=""/>-->
+    </div>
+  </a>
+</ng-template>
+
