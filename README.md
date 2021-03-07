@@ -10,9 +10,3 @@ Technologies:
 You can view an example on this page: [Game of Thrones](http://got-angular.aestebanceldran.com/)
 
 ![example](https://github.com/aestebance/GOT-Angular/blob/master/example.png)
-
-
-
-
-
-https://github.com/aestebance/GOT-Angular/blob/master/example.png
