@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {TranslateService} from '@ngx-translate/core';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'game-of-thrones';
+  constructor(public translate: TranslateService) {
+    translate.addLangs(['es', 'en', 'ro']);
+    translate.setDefaultLang('es');
+    const language = localStorage.getItem('language') || 'es';
+    translate.use(language);
+  }
 }

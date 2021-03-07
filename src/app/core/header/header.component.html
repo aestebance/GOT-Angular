@@ -3,15 +3,15 @@
     <a *ngIf="showBack" routerLink="/{{showBack}}">
       <div class="c-left-bar__nav">
         <img class="c-left-bar__vector" src="/assets/images/vector.svg" alt=""/>
-        <span class="c-left-bar__text">Volver</span>
+        <span class="c-left-bar__text">{{"Back" | translate}}</span>
       </div>
     </a>
     <app-search-bar *ngIf="showBar" class="c-searchBar" (searchBarEmitter)="searchBarChanges($event)"></app-search-bar>
   </div>
   <div class="c-top-links">
     <a *ngIf="showHome" routerLink="/"><img class="c-top-links__flag--group" src="/assets/images/group.png" alt=""/></a>
-    <img class="c-top-links__flag" src="/assets/images/spain.png" alt=""/>
-    <img class="c-top-links__flag" src="/assets/images/romania.png" alt=""/>
-    <img class="c-top-links__flag" src="/assets/images/uk.png" alt=""/>
+    <img (click)="changeLanguage('es')" class="c-top-links__flag" src="/assets/images/spain.png" alt=""/>
+    <img (click)="changeLanguage('ro')" class="c-top-links__flag" src="/assets/images/romania.png" alt=""/>
+    <img (click)="changeLanguage('en')" class="c-top-links__flag" src="/assets/images/uk.png" alt=""/>
   </div>
 </div>

@@ -1,0 +1,25 @@
+{
+  "HOME": {
+    "CHARACTERS": "CHARACTERS",
+    "HOUSES": "HOUSES",
+    "CHRONOLOGY": "CHRONOLOGY"
+  },
+  "CHARACTER": {
+    "HOUSE": "HOUSE",
+    "ALLEGIANCE": "ALLEGIANCE",
+    "APPEARANCES": "APPEARANCES",
+    "FATHER": "FATHER",
+    "SIBLINGS": "SIBLINGS",
+    "TITLES": "TITLES"
+  },
+  "HOUSE": {
+    "WORDS": "WORDS",
+    "SEAT": "SEAT",
+    "REGION": "REGION",
+    "ALLEGIANCE": "ALLEGIANCE",
+    "RELIGIONS": "RELIGIONS",
+    "CREATION": "CREATION"
+  },
+  "Back": "Back",
+  "Search": "Search"
+}

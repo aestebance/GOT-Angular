@@ -1,0 +1,25 @@
+{
+  "HOME": {
+    "CHARACTERS": "PERSONAJE",
+    "HOUSES": "CASE",
+    "CHRONOLOGY": "CRONOLOGIE"
+  },
+  "CHARACTER": {
+    "HOUSE": "CASA",
+    "ALLEGIANCE": "ALIANTE",
+    "APPEARANCES": "APARENțE",
+    "FATHER": "PARINTE",
+    "SIBLINGS": "FRATII",
+    "TITLES": "TITLURI"
+  },
+  "HOUSE": {
+    "WORDS": "MOTTO",
+    "SEAT": "CAMPUS",
+    "REGION": "REGIUNE",
+    "ALLEGIANCE": "ALIANTE",
+    "RELIGIONS": "RELIGIILE",
+    "CREATION": "FRUNDARE"
+  },
+  "Back": "Intoarcere",
+  "Search": "Cauta"
+}

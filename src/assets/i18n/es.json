@@ -1,0 +1,25 @@
+{
+  "HOME": {
+    "CHARACTERS": "PERSONAJES",
+    "HOUSES": "CASAS",
+    "CHRONOLOGY": "CRONOLOGIA"
+  },
+  "CHARACTER": {
+    "HOUSE": "CASA",
+    "ALLEGIANCE": "ALIANZAS",
+    "APPEARANCES": "APARICIONES",
+    "FATHER": "PADRE",
+    "SIBLINGS": "HERMANOS",
+    "TITLES": "TITULOS"
+  },
+  "HOUSE": {
+    "WORDS": "LEMA",
+    "SEAT": "SEDE",
+    "REGION": "REGION",
+    "ALLEGIANCE": "ALIANZAS",
+    "RELIGIONS": "RELIGIONES",
+    "CREATION": "CREACION"
+  },
+  "Back": "Volver",
+  "Search": "Buscar"
+}

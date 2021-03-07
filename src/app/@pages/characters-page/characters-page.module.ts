@@ -8,6 +8,13 @@ import { CharacterDetailComponent } from './pages/character-detail/character-det
 import { CharacterItemComponent } from './components/character-item/character-item.component';
 import { CharactersGalleryComponent } from './components/characters-gallery/characters-gallery.component';
 import {ScrollingModule} from '@angular/cdk/scrolling';
+import {HttpClientModule, HttpClient} from '@angular/common/http';
+import {TranslateModule, TranslateLoader} from '@ngx-translate/core';
+import {TranslateHttpLoader} from '@ngx-translate/http-loader';
+
+export function HttpLoaderFactory(http: HttpClient): TranslateHttpLoader {
+  return new TranslateHttpLoader(http);
+}
 
 @NgModule({
   declarations: [CharactersPageComponent, CharacterDetailComponent, CharacterItemComponent, CharactersGalleryComponent],
@@ -16,7 +23,15 @@ import {ScrollingModule} from '@angular/cdk/scrolling';
     CharactersPageRoutingModule,
     SharedModule,
     CoreModule,
-    ScrollingModule
+    ScrollingModule,
+    HttpClientModule,
+    TranslateModule.forChild({
+      loader: {
+        provide: TranslateLoader,
+        useFactory: HttpLoaderFactory,
+        deps: [HttpClient]
+      }
+    }),
   ],
   exports: [
     CharactersPageRoutingModule

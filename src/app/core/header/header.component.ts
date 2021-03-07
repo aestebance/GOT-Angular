@@ -1,4 +1,5 @@
 import { EventEmitter, Component, OnInit, Input, Output } from '@angular/core';
+import {TranslateService} from '@ngx-translate/core';
 
 @Component({
   selector: 'app-header',
@@ -11,11 +12,19 @@ export class HeaderComponent implements OnInit {
   @Input() showBack: any;
   @Output() searchBarEmitter = new EventEmitter();
 
-  constructor() { }
+  constructor(private translate: TranslateService) {
+    const language = localStorage.getItem('language') || 'es';
+    translate.use(language);
+  }
 
   searchBarChanges(changes): void {
     this.searchBarEmitter.emit(changes);
   }
+
+  changeLanguage(language: string): void {
+    localStorage.setItem('language', language);
+    this.translate.use(language);
+}
 
   ngOnInit(): void {
   }
